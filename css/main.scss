@@ -4,50 +4,629 @@
 @charset "utf-8";
 
 
+@import url(http://fonts.googleapis.com/css?family=Open+Sans:300);
+@import "sansation";
+@import "icomoon";
 
-// Our variables
-$base-font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
-$base-font-size:   16px;
-$base-font-weight: 400;
-$small-font-size:  $base-font-size * 0.875;
-$base-line-height: 1.5;
-
-$spacing-unit:     30px;
-
-$text-color:       #111;
-$background-color: #fdfdfd;
-$brand-color:      #2a7ae2;
-
-$grey-color:       #828282;
-$grey-color-light: lighten($grey-color, 40%);
-$grey-color-dark:  darken($grey-color, 25%);
-
-// Width of the content area
-$content-width:    800px;
-
-$on-palm:          600px;
-$on-laptop:        800px;
+/* Variables */
+$footer-height: 60px; /* Does not adjust the position of #to-top */
 
 
+/*
+      Created by CSS Portal Layout Generator
 
-// Use media queries like this:
-// @include media-query($on-palm) {
-//     .wrapper {
-//         padding-right: $spacing-unit / 2;
-//         padding-left: $spacing-unit / 2;
-//     }
-// }
-@mixin media-query($device) {
-    @media screen and (max-width: $device) {
-        @content;
+      http://www.cssportal.com
+
+*/
+
+* { padding: 0; margin: 0; }
+
+html, body {
+    font-family: Verdana, Arial, Helvetica, sans-serif;
+    font-size: 17px;
+    @media all and (max-width: 800px) {
+    font-size: 16px;
+     }
+    height: 100%; /* height + html & body here gets footer to bottom */
+}
+
+body {
+    /* background moved from #content to body so it fills the full view down to the footer */
+    /* background: #cccccc url('EarthWP16_opac25_for_web.jpg') no-repeat center center; */  /* repeat-y */
+    /* background: #fff url('images/antennas-background.jpg') no-repeat center center;
+    background-attachment: fixed; */
+
+      /* http://css-tricks.com/perfect-full-page-background-image/ */
+      background: url(images/antennas-background.jpg) no-repeat center center fixed;
+      -webkit-background-size: cover;
+      -moz-background-size: cover;
+      -o-background-size: cover;
+      background-size: cover;
+}
+
+/* footer to bottom, regardless of amount of content */
+#wrapper {min-height: 100%;}
+
+
+#content {
+    overflow:auto;
+    //padding-bottom: $footer-height; /* must be same height as the footer */ //Is this required? It adds empty space between content and the footer.
+}
+
+#footer {position: relative;
+    margin-top: -$footer-height; /* negative value of footer height */
+    height: $footer-height;
+    clear:both; }
+
+/*Opera Fix*/
+/* Compass reports invalid SCSS because of / in the margin-top property
+body:before {
+    content:"";
+    height:100%;
+    float:left;
+    width:0;
+    margin-top:-32767px;/
+} */
+/* footer to bottom, regardless of amount of content */
+
+
+/* Back to top */
+
+/* Remove the font-variant of i element to italic */
+.icon-angle-up {
+    font-style: normal;
+}
+
+#to-top {
+    display: block;
+    position: fixed;
+    text-align: center;
+    line-height: 12px !important;
+    right: 17px;
+    /* bottom: -30px; */
+    bottom: 15px;
+    color: #FFF;
+    cursor: pointer;
+    border-radius: 2px;
+    z-index: 10000;
+    height: 29px;
+    width: 29px;
+    //rgba() fallback for background-color works in IE 10's IE7 mode (document mode), however rgba() fallback for color does not seem to work in IE7 but works in IE8
+    background-color: #79797c; //fallback for browsers that do not support rgba(), still need the fallback for the up arrow
+    background-color: rgba(0, 0, 0, 0.4);
+    background-repeat: no-repeat;
+    background-position: center center;
+    transition: background-color 0.1s linear 0s;
+    border-bottom: none; //remove the bottom border which is defined for links
+}
+
+#to-top i {
+    line-height: 29px !important;
+    width: 29px !important;
+    height: 29px !important;
+    font-size: 14px !important;
+    top: 0px !important;
+    left: 0px !important;
+    text-align: center !important;
+    background-color: transparent !important;
+}
+
+#to-top .fallback { display: none; }
+.lt-ie8 #to-top .icon-arrow-up { display: none; }
+.lt-ie8 #to-top .fallback { display: block; color: #fff; }
+
+@media only screen and (min-width: 350px) and (max-width: 800px) {
+    #to-top {
+        /* display: none!important; */
+        position: absolute;
     }
+}
+
+@media only screen and (max-width: 350px){
+    #to-top {
+        display: none!important;
+    }
+}
+
+/* iPad landscape fixes, see www.prostory.ca CSS */
+/*
+@media only screen and (min-device-width: 481px) and (max-device-width: 1025px) and (orientation:landscape) {
+    #to-top {
+        display: none!important;
+    }
+}
+*/
+
+img, iframe { max-width: 100%; }
+
+p {
+    margin: 10px 0 10px;
+    line-height: 1.5;
+ /* padding:0 0 80px; */ /* bottom padding clears the #footer */
+}
+
+/* p.c { text-align: center; } */
+
+h1, h2 {
+    font-family: "sansationregular", "Open Sans", Verdana, Arial, Helvetica, sans-serif;
+    font-weight: 400;
+    color: rgba(104, 102, 102, 1);
+    line-height: 1.2;
+}
+h1 {
+    font-size: 28px;
+    margin: 25px 0 25px;
+}
+h2 {
+    font-size: 22px;
+    text-transform: capitalize;
+    margin: 38px 0 25px;
+    color: #505a6b; /* rgba() fallback for color, does not seem to work in IE 10's IE7 mode (document mode) though, works in IE8 and for background-color in IE7 */
+    color: rgba(38, 50, 72, 0.8);
+}
+/*
+h1 span {
+    color: #000000;
+}
+*/
+
+img table { border: 0px; }
+
+/*
+a:hover was not working for visited links when a:visited was declared after a:hover
+there is a sequence between link css to take effect.. a:hover must come after a:link and a:visited and a:active must come after a:hover for more details refer below link..
+http://www.w3schools.com/css/css_pseudo_classes.asp
+*/
+
+a {
+    text-decoration: none;
+    border-bottom: 1px #333 solid;
+    color: rgba(13, 98, 226, 0.9);
+}
+
+a:visited {
+    color: #333;
+    color: #0dc3ff;
+    color: rgb(13, 98, 126);
+}
+
+a:hover,
+a:focus,
+a:active {
+    color: #000000;
+}
+
+a#contact,
+a#contact:visited {
+    color: #fff;
+    text-decoration: none;
+    padding-bottom: 1px;
+    border-bottom: none;
+}
+
+a#contact:hover,
+a#contact:focus,
+a#contact:active {
+    color: #fff;
+    border-bottom: 1px solid #fff;
+}
+
+
+/* remove link underline from image links http://forums.htmlhelp.com/index.php?showtopic=11518
+(if the image has transparent pixels the underline/border-bottom will show through) */
+
+a img { position: relative; bottom: -.4em }
+/* reset for .overlap-figure which doens't require this */
+.overlap-figure a img { bottom: 0em; }
+
+a img { border: 0; } //Remove blue image outline on image links in IE (http://webdev-il.blogspot.fi/2009/12/how-to-remove-blue-link-image-border-in.html)
+
+/* use the CSS class image-link for images with transparent pixels */
+.image-link { text-decoration: none; border-bottom: none ; }
+
+
+
+a.newqsl { font-weight: bold; }
+
+//#address { width: 300px; margin: 20px auto 20px auto; }
+#address { @extend %clearfix; }
+#address img { float: left; margin: 15px; }
+#address span { display: block; margin-top: 25px; }
+
+@media only screen and (max-width: 450px) {
+#address img { display: none; }
+}
+
+iframe {
+    overflow: hidden;
+    border: 0;
+}
+
+#wrapper {
+    margin: 0 auto;
+    width: 100%;
+ }
+
+#content {
+    float: left;
+    color: #000;
+    width: 100%;
+    display: inline;
+}
+
+
+#header {
+    color: #333;
+    width: 100%;
+    float: left;
+    height: 75px;
+
+    background-color: #000000;
+
+    /* Fallback for <IE9 and other older browsers */
+    // Note that we would need to create a modernizr fallback for browsers that do not support multiple backgrounds, if this would
+    // be a different background image not included in the multiple background images declaration (otherwise browsers that support
+    // multiple background images would download this extra image unneccessarily.)
+    background: url('images/footer-bg.jpg') center center repeat;
+
+    /* Multi-background supporting browsers */
+    // First background image is on top: http://css-tricks.com/stacking-order-of-multiple-backgrounds/
+    background: url('images/Earth-07052014.png') right top no-repeat, url('images/footer-bg.jpg') center center repeat;
 }
 
 
 
-// Import partials from `sass_dir` (defaults to `_sass`)
-@import
-        "base",
-        "layout",
-        "syntax-highlighting"
-;
+#footer {
+    /*
+    font-family: "Segoe UI", Candara, "Bitstream Vera Sans", "DejaVu Sans", "Bitstream Vera Sans", "Trebuchet MS",
+    Verdana, "Verdana Ref", sans serif;
+    */
+    font-family: 'Open Sans', 'sans-serif';
+    /* defined at the top of this stylesheet
+    width: 100%;
+    height: 35px;
+    clear: both; */
+    color: #fff;
+    background: #252525 url('images/footer-bg.jpg') repeat center center;
+    text-align: center;
+    line-height: $footer-height; /* Footer height */
+}
+
+#social {
+    width: 200px; display: inline; position: absolute; left: 70%;
+    font-size: 18px;
+    a {
+        display: inline-block; margin-left: 10px;
+        text-decoration: none; border-bottom: none; color: #fff;
+        &:hover, &:active, &:focus { .icon-twitter { color: #00aced; } }
+        &:hover, &:active, &:focus { .icon-facebook { color: #3b5998; } }
+        &:hover, &:active, &:focus { .icon-youtube { color: #bb0000; } }
+        &:hover, &:active, &:focus { .icon-flickr { color: #0063dc; } }
+    }
+    @media only screen and (max-width: 800px) { display: none; }
+}
+
+
+//Vanhat
+#madewith {
+    width: 200px; display: inline; position: absolute; left: 75%;
+}
+
+#madewith a { text-decoration: none; border-bottom: none; }
+
+@media only screen and (max-width: 800px) {
+#madewith { display: none; }
+}
+
+#madewith a img { border: 0; vertical-align: text-bottom; }
+
+/* Generated via www.cssmenubuilder.com */
+.breadcrumb{position:relative; height:30px; width:100%;}
+.breadcrumb ul{position:relative; margin:0 5px 0 5px; padding:0; height:30px; background:url('breadcrumbImage.png') 0px -30px repeat-x; }
+.breadcrumb ul li{padding:0; margin:0; list-style:none; float:left; height:30px; display:inline;}
+.breadcrumb ul li a{font: 14px 'Open Sans', sans-serif; /* Arial, Helvetica, sans-serif; */ color:rgb(255,255,255); text-decoration:none; line-height:30px; display:block; background:url('breadcrumbImage.png') 100% -60px no-repeat; padding:0 17px 0 15px; }
+.breadcrumb ul li a:hover {text-decoration:none; color:rbg(255,255,255);}
+.breadcrumb ul li a.active{background:none; color:rgb(255,255,255);}
+.breadcrumb ul li a.active:hover {text-decoration:none;}
+.breadcrumb .left{position:absolute; top:0px; left:0px; width:10px; height:30px; display:block; z-index:1; background:url('breadcrumbImage.png') 0% 0px no-repeat;}
+.breadcrumb .right{position:absolute; top:0px; right:0px; width:10px; height:30px; display:block; z-index:1; background:url('breadcrumbImage.png') 100% -90px no-repeat; }
+
+
+@media only screen and (max-width: 800px) {
+
+#header {
+    color: #333;
+    width: 100%;
+    float: none;
+    height: 75px;
+    background:#000000 url('none');
+}
+
+/* Generated via www.cssmenubuilder.com */
+.breadcrumb{position:static; height: 180px; width:100%; }
+.breadcrumb ul {position:relative; margin:0; padding:0; height:30px; background:#333; background-image: none;  text-align:center; }
+.breadcrumb ul li{padding:0; margin:0; list-style:none; height:30px; display:inline; float: none;}
+.breadcrumb ul li a{font:14px 'Open Sans', sans-serif; /* Arial, Helvetica, sans-serif; */ color:rgb(255,255,255); text-decoration:none; line-height:30px; display:block; background-image: none; background: #333;  }
+.breadcrumb ul li a:hover {text-decoration:none; border-bottom: 1px solid #fff; color:rbg(255,255,255);}
+.breadcrumb ul li a.active{background:none; color:rgb(255,255,255);}
+.breadcrumb ul li a.active:hover {text-decoration:none;}
+.breadcrumb .left, .breadcrumb .right { display: none; }
+}
+
+
+
+/* daltonlp.com semi-transparent background */
+.trans_box2 {
+    font-family: 'Open Sans', 'sans-serif';
+    font-weight: normal;
+    padding:40px;
+    margin:30px;
+    border:solid 1px #ccc; // oli #555 07-05-2014
+    /* Mozilla ignores crazy MS image filters, so it will skip the following */
+    filter:progid:DXImageTransform.Microsoft.AlphaImageLoader(enabled=true, sizingMethod=scale, src='images/75p_white_55p.png');
+}
+/* IE ignores styles with [attributes], so it will skip the following. */
+.trans_box2[class] {
+    background-image:url(images/75p_white_55p.png);
+}
+
+/* Fix for IE7 and below to keep the content from going under the footer */
+.lt-ie8 .trans_box2 { padding-bottom: 80px; }
+/* */
+
+.content-inner {
+    width: 95%;
+    max-width: 900px;
+    margin: 0 auto;
+}
+
+@media screen and (min-width: 1700px){
+    .content-inner { width: 65%; }
+}
+
+/* required for round image corners jquery plugin */
+/* #imgBox, #imgBox img { width:500px; height:375px; margin:0;padding:0 } */
+.center { margin-left: auto; margin-right: auto; }
+
+input:focus,
+textarea:focus {
+    background-color: #fcfcfc;
+}
+
+/* images with simple captions */
+.image { padding: 28px; }
+.image .caption { margin: 8px; }
+
+/* nice image border */
+.img-wrapper img {
+    background-color: #fff;
+    border: 1px solid #a9a9a9;
+    padding: 4px;
+    margin: -5px 5px 5px -5px;
+}
+
+/*
+http://hansmuller-webkit.blogspot.fi/2014/04/captioneering_16.html
+caption overlapping figure http://codepen.io/adobe/pen/bhoGK
+*/
+.overlap-figure {
+  /* Removed the display: table; to make the images responsive
+  display: table;
+  */
+
+  /*
+  http://hansmuller-webkit.blogspot.fi/2014/04/captioneering_16.html
+  To get the caption text to wrap below the image, instead of extending off to the right, we’ve had to specify
+  “display: table; width 1px” for the figure element. It’s an incantation that appears to be somewhat widely known
+  but not widely understood (see this CSS-lab article for example).
+  */
+
+  /* Removed the width: 1px; to make the images responsive
+  width: 1px;
+  */
+
+  /* display: table; and width: 1px; made the container fit to the image regardless of the image size and kept
+  the caption text from expanding the container, but it was not
+  responsive */
+
+  /* Responsive */
+  width: 800px; /* .overlap-figure images must be at least 800px wide to be centered in the container and to fill the div */
+  max-width: 100%;
+
+  border: 1px solid #ccc;
+  padding: 3px;
+  font-family: 'Open Sans', 'sans-serif';
+  font-size: 14px;
+  color: #fff;
+  margin: 35px 0 0;
+}
+
+.overlap-figure .of-container { position: relative; }
+.overlap-figure img { display: block; }
+
+.overlap-figure
+.caption {
+  position: absolute;
+  bottom: 0px;
+  padding: 1em;
+  background-color: rgba(38,50,72, 0.5);
+}
+
+.overlap-figure a:link, .overlap-figure a:hover, .overlap-figure a:focus, .overlap-figure a:active, .overlap-figure a:visited {
+    color: rgb(125, 198, 245);
+    border-bottom: 1px solid rgb(125, 198, 245);
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* UL-list callsigns */
+#callsigns {
+    list-style-type: none;
+    font-size: 14px;
+}
+
+/* UL-list links */
+.links { list-style-type: none; }
+
+/* Vaasa area table */
+#vsa-area {
+    width: 240px;
+    margin: 10px auto 25px auto;
+    padding: 10px ;
+    border: 1px solid #999;
+    text-align: left;
+    border-radius: 15px;
+}
+
+/* Contact form styles */
+#contact-form { margin: 65px 25px; }
+
+#contact-form label {
+    display: block;
+    padding-bottom: 0.25em;
+    font-weight: bold;
+    font-style: normal;
+    color: #4f4f4f;
+}
+
+#contact-form input[type="text"],
+#contact-form textarea {
+    background-color: #fff;
+    border: 1px solid rgba(0,0,0,0.1);
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    -o-border-radius: 5px;
+    -ms-border-radius: 5px;
+    -khtml-border-radius: 5px;
+    border-radius: 5px;
+    margin-bottom: 1em;
+    outline: none;
+    padding: 0.5em;
+    width: 65%;
+    font-family: 'MS Shell Dlg', Verdana, Arial, Helvetica, sans-serif;
+    font-size: 1em;
+    color: #484747;
+}
+
+#contact-form input[type="text"]:focus,
+#contact-form textarea:focus {
+    border: 1px solid #ccc;
+    background-color: #fffffc;
+}
+
+.button {
+    border: 2px solid rgba(0, 0, 0, 0.75);
+    color: #444;
+    background-color: transparent !important;
+    box-shadow: none !important;
+    opacity: 1 !important;
+    transition: all 0.2s linear 0s !important;
+    border-radius: 2px !important;
+    border: 2px solid rgba(255, 255, 255, 0.75);
+    font: 14px/100% Arial, Helvetica, sans-serif;
+    font-size: 13px;
+    font-weight: 600;
+    padding: 15px 22px;
+    text-transform: uppercase;
+    display: inline-block;
+    vertical-align: baseline;
+    cursor: pointer;
+}
+
+.button:hover {
+    border: 2px solid #333;
+}
+.button:active {
+    position: relative;
+    top: 1px;
+}
+
+/*
+.button {
+    display: inline-block;
+    zoom: 1; /* zoom and *display = ie7 hack for display:inline-block */
+
+    /*
+
+    *display: inline;
+    vertical-align: baseline;
+    margin: 0 2px;
+    outline: none;
+    cursor: pointer;
+    text-align: center;
+    text-decoration: none;
+    font: 14px/100% Arial, Helvetica, sans-serif;
+    padding: .5em 2em .55em;
+    text-shadow: 0 1px 1px rgba(0,0,0,.3);
+    -webkit-border-radius: .5em;
+    -moz-border-radius: .5em;
+    border-radius: .5em;
+    -webkit-box-shadow: 0 1px 2px rgba(0,0,0,.2);
+    -moz-box-shadow: 0 1px 2px rgba(0,0,0,.2);
+    box-shadow: 0 1px 2px rgba(0,0,0,.2);
+}
+.button:hover {
+    text-decoration: none;
+}
+.button:active {
+    position: relative;
+    top: 1px;
+}
+*/
+
+/* white */
+
+/*
+.white {
+    color: #606060;
+    border: solid 1px #b7b7b7;
+    background: #fff;
+    background: -webkit-gradient(linear, left top, left bottom, from(#fff), to(#ededed));
+    background: -moz-linear-gradient(top,  #fff,  #ededed);
+    filter:  progid:DXImageTransform.Microsoft.gradient(startColorstr='#ffffff', endColorstr='#ededed');
+}
+.white:hover {
+    background: #ededed;
+    background: -webkit-gradient(linear, left top, left bottom, from(#fff), to(#dcdcdc));
+    background: -moz-linear-gradient(top,  #fff,  #dcdcdc);
+    filter:  progid:DXImageTransform.Microsoft.gradient(startColorstr='#ffffff', endColorstr='#dcdcdc');
+}
+.white:active {
+    color: #999;
+    background: -webkit-gradient(linear, left top, left bottom, from(#ededed), to(#fff));
+    background: -moz-linear-gradient(top,  #ededed,  #fff);
+    filter:  progid:DXImageTransform.Microsoft.gradient(startColorstr='#ededed', endColorstr='#ffffff');
+}
+
+.medium {
+    font-size: 12px;
+    padding: .4em 1.5em .42em;
+}
+*/
+
+
+/* Clearfix SCSS placeholder, use with @extend clearfix; where you need it */
+
+%clearfix {
+  /* For modern browsers */
+  &:before, &:after {
+    content: "";
+    display: table;
+  }
+  &:after {
+    clear: both;
+  }
+  *zoom:1; /* For IE 6/7 (trigger hasLayout) */
+}
+
