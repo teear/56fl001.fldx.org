@@ -37,7 +37,7 @@ body {
     background-attachment: fixed; */
 
       /* http://css-tricks.com/perfect-full-page-background-image/ */
-      background: url(images/antennas-background.jpg) no-repeat center center fixed;
+      background: url({{ site.baseurl }}/images/antennas-background.jpg) no-repeat center center fixed;
       -webkit-background-size: cover;
       -moz-background-size: cover;
       -o-background-size: cover;
@@ -267,11 +267,11 @@ iframe {
     // Note that we would need to create a modernizr fallback for browsers that do not support multiple backgrounds, if this would
     // be a different background image not included in the multiple background images declaration (otherwise browsers that support
     // multiple background images would download this extra image unneccessarily.)
-    background: url('images/footer-bg.jpg') center center repeat;
+    background: url('{{ site.baseurl }}/images/footer-bg.jpg') center center repeat;
 
     /* Multi-background supporting browsers */
     // First background image is on top: http://css-tricks.com/stacking-order-of-multiple-backgrounds/
-    background: url('images/Earth-07052014.png') right top no-repeat, url('images/footer-bg.jpg') center center repeat;
+    background: url('{{ site.baseurl }}/images/Earth-07052014.png') right top no-repeat, url('images/footer-bg.jpg') center center repeat;
 }
 
 
@@ -287,7 +287,7 @@ iframe {
     height: 35px;
     clear: both; */
     color: #fff;
-    background: #252525 url('images/footer-bg.jpg') repeat center center;
+    background: #252525 url('{{ site.baseurl }}/images/footer-bg.jpg') repeat center center;
     text-align: center;
     line-height: $footer-height; /* Footer height */
 }
@@ -322,14 +322,14 @@ iframe {
 
 /* Generated via www.cssmenubuilder.com */
 .breadcrumb{position:relative; height:30px; width:100%; background: #000; }
-.breadcrumb ul{position:relative; margin:0 5px 0 5px; padding:0; height:30px; background:url('breadcrumbImage.png') 0px -30px repeat-x; }
+.breadcrumb ul{position:relative; margin:0 5px 0 5px; padding:0; height:30px; background:url('{{ site.baseurl }}/breadcrumbImage.png') 0px -30px repeat-x; }
 .breadcrumb ul li{padding:0; margin:0; list-style:none; float:left; height:30px; display:inline;}
 .breadcrumb ul li a{font: 14px 'Open Sans', sans-serif; /* Arial, Helvetica, sans-serif; */ color:rgb(255,255,255); text-decoration:none; line-height:30px; display:block; background:url('breadcrumbImage.png') 100% -60px no-repeat; padding:0 17px 0 15px; }
 .breadcrumb ul li a:hover {text-decoration:none; color:rbg(255,255,255);}
 .breadcrumb ul li a.active{background:none; color:rgb(255,255,255);}
 .breadcrumb ul li a.active:hover {text-decoration:none;}
-.breadcrumb .left{position:absolute; top:0px; left:0px; width:10px; height:30px; display:block; z-index:1; background:url('breadcrumbImage.png') 0% 0px no-repeat;}
-.breadcrumb .right{position:absolute; top:0px; right:0px; width:10px; height:30px; display:block; z-index:1; background:url('breadcrumbImage.png') 100% -90px no-repeat; }
+.breadcrumb .left{position:absolute; top:0px; left:0px; width:10px; height:30px; display:block; z-index:1; background:url('{{ site.baseurl }}/breadcrumbImage.png') 0% 0px no-repeat;}
+.breadcrumb .right{position:absolute; top:0px; right:0px; width:10px; height:30px; display:block; z-index:1; background:url('{{ site.baseurl }}/breadcrumbImage.png') 100% -90px no-repeat; }
 
 
 @media only screen and (max-width: 800px) {
@@ -367,7 +367,7 @@ iframe {
 }
 /* IE ignores styles with [attributes], so it will skip the following. */
 .trans_box2[class] {
-    background-image:url(images/75p_white_55p.png);
+    background-image:url({{ site.baseurl }}/images/75p_white_55p.png);
 }
 
 /* Fix for IE7 and below to keep the content from going under the footer */
