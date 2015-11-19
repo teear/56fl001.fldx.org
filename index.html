@@ -2,22 +2,74 @@
 layout: default
 ---
 
-<div class="home">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js"></script>
 
-  <h1 class="page-heading">Posts</h1>
+<script src="js/fitvids/jquery.fitvids.js"></script>
+<script>
+  $(document).ready(function(){
+    // Target your .container, .wrapper, .post, etc.
+    $("#video-container").fitVids();
+  });
+</script>
 
-  <ul class="post-list">
-    {% for post in site.posts %}
-      <li>
-        <span class="post-meta">{{ post.date | date: "%b %-d, %Y" }}</span>
+<h1>Welcome to <span>56FL001's Radio Website</span></h1>
 
-        <h2>
-          <a class="post-link" href="{{ post.url | prepend: site.baseurl }}">{{ post.title }}</a>
-        </h2>
-      </li>
-    {% endfor %}
-  </ul>
+<p>
+Aurora Borealis
+</p>
 
-  <p class="rss-subscribe">subscribe <a href="{{ "/feed.xml" | prepend: site.baseurl }}">via RSS</a></p>
+<!-- ionosonde sound
+<iframe title="YouTube video player" width="480" height="390" src="http://www.youtube.com/embed/uFMcHKft84k" frameborder="0" allowfullscreen></iframe>
+-->
 
+
+
+<div id="video-container" style="max-width: 640px; margin: 0 0 25px; text-align: left;"> <!-- normal centering style="width: 640px;"  -->
+ <iframe width="640" height="360" src="http://www.youtube.com/embed/Lc3FxNXjBs0" allowfullscreen></iframe><!-- frameborder=0 -->
+</div>
+
+<!--
+<div style="width: 640px; margin: 0 auto; text-align: left;">
+<object type="application/x-shockwave-flash" data="http://www.youtube.com/v/Lc3FxNXjBs0&amp;hl=fi_FI&amp;fs=1" width="640" height="385">
+<param name="movie" value="http://www.youtube.com/v/Lc3FxNXjBs0&amp;hl=fi_FI&amp;fs=1" />
+<param name="allowFullScreen" value="true" />
+<param name="allowscriptaccess" value="always" />
+<a href="http://www.youtube.com/v/Lc3FxNXjBs0&amp;hl=fi_FI&amp;fs=1" target="_blank">http://www.youtube.com/v/Lc3FxNXjBs0&amp;hl=fi_FI&amp;fs=1</a>
+</object>
+</div>
+-->
+
+<div>
+<p>
+Aurora QSO with 20SD110 Kare in Norway on 11.11.2010<br />
+<a href="http://www.ustream.tv/recorded/10783507" target="_blank">http://www.ustream.tv/recorded/10783507</a>
+</p>
+</div>
+
+<div>
+<p>
+I participated in the <a href="http://www.alfatango.org/cms/index.php/at-contest/263-woman-s-day-contest" target="_blank">AT Woman's Day Contest 2014</a>, video by 14FAT133 on 8.3.2014<br>
+<a href="http://www.youtube.com/watch?v=xcrPMlTOLTo" target="_blank">http://www.youtube.com/watch?v=xcrPMlTOLTo</a>
+</p>
+</div>
+
+<div style="margin: 25px 0;">
+<p class="c"><a href="http://fldx.org" target="_blank"><img src="http://fldx.org/site/images/fl_banner.jpg" alt="Finnish International
+DX Group Foxtrot Lima" style="border: 0px;" /></a>
+</p>
+</div>
+
+
+<!-- Foxtrot Lima clusterspots.php -->
+<p>
+To see the latest spots from most of the 11m clusters <a href="http://fldx.org/site/clusterspots.php" target="_blank">click here</a>.<br />
+</p>
+
+<div>
+<form method="get" action="http://www.qrz11.com/show_prof.php" target="_blank">
+<table style="border: 0px; background-color: #ececec;">
+<tr><td><a href="http://www.qrz11.com" target="_blank"><img alt="QRZ11.com" src="http://www.qrz11.com/pressroom/banners/half-banner-qrz11.gif" /></a></td></tr>
+<tr><td>Callsign:&nbsp;&nbsp; <input type="text" name="callsign" size="8" /> <input type="submit" value="search" /></td></tr>
+</table>
+</form>
 </div>
