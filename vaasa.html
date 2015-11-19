@@ -1,0 +1,168 @@
+---
+layout: default
+---
+
+<style type="text/css" scoped>
+           /* Set a size for our map container, the Google Map will take up 100% of this container */
+
+           #map {
+               width: 750px;
+               height: 500px;
+               /* margin: 0 auto; */
+           }
+
+           #map img {
+               max-width: none; //so the map controls do not distort
+           }
+       </style>
+
+       <script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDhGoEDyrfCM_Msjx7P4Cw-T5jQ2ztN2h0&sensor=false"></script>
+
+       <script type="text/javascript">
+           // When the window has finished loading create our google map below
+           google.maps.event.addDomListener(window, 'load', init);
+
+           function init() {
+               var mapOptions = {
+                   zoom: 7, //Initial zoom-level (required)
+                   center: new google.maps.LatLng(63.095141,21.616513), // Vaasa
+                   //Styling (Snazzy Maps)
+                   styles: [ {   featureType:'water',    stylers:[{color:'#46bcec'},{visibility:'on'}] },{   featureType:'landscape',    stylers:[{color:'#f2f2f2'}] },{   featureType:'road',   stylers:[{saturation:-100},{lightness:45}]  },{   featureType:'road.highway',   stylers:[{visibility:'simplified'}] },{   featureType:'road.arterial',    elementType:'labels.icon',    stylers:[{visibility:'off'}]  },{   featureType:'administrative',   elementType:'labels.text.fill',   stylers:[{color:'#444444'}] },{   featureType:'transit',    stylers:[{visibility:'off'}]  },{   featureType:'poi',    stylers:[{visibility:'off'}]  }]
+               };
+
+               // Get the HTML DOM element that will contain your map
+               var mapElement = document.getElementById('map');
+
+               // Create the Google Map using out element and options defined above
+               var map = new google.maps.Map(mapElement, mapOptions);
+           }
+
+           google.maps.event.addDomListener(window, 'resize', initialize);
+           google.maps.event.addDomListener(window, 'load', initialize);
+       </script>
+
+<h1>About my City Vaasa</h1>
+
+<p>City of Vaasa is located in the narrowest point of the Gulf of Bothnia.
+Vaasa (The capital of Ostrobothnia) has over 66 000 inhabitants; 70% speak Finnish
+as their mother tongue, 22% speak Swedish and 7% speak other languages.
+</p>
+
+<p style="text-align: center;">
+ <img src="images/vaasa_waves_transp.gif" alt="City of Vaasa">
+</p>
+
+<table id="vsa-area">
+ <caption>Vaasa area</caption>
+ <tr><th>Total area</th><td>575&nbsp;sq&nbsp;km</td></tr>
+ <tr><td>-land</td><td>364&nbsp;sq&nbsp;km</td></tr>
+ <tr><td>-water</td><td>210&nbsp;sq&nbsp;km</td></tr>
+ <tr><th>Shoreline</th><td>473 km</td></tr>
+ <tr><td>-mainland shoreline</td><td>80 km</td></tr>
+ <tr><td>-archipelago shoreline</td><td>313 km</td></tr>
+ <tr><td>-lake shoreline</td><td>80 km</td></tr>
+</table>
+
+<p>
+ In 1606 Charles IX founded the town of Vaasa around the oldest harbour and trading point
+ in Ostrobothnia. In 1852 Vaasa was burnt to the ground, and in 1862 the new town of Vaasa
+ was built on the Klemets&ouml; headland 7 km from the old town.
+</p>
+
+<h2>Vaasa on the map</h2>
+
+<div class="map-container">
+<div id="map" style='width:100%; height:400px;'></div>
+</div>
+
+<!--
+<iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d1848764.4370329988!2d21.61651279999999!3d63.095141199999986!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x467d603e623ab243%3A0x1e1d7faa61aa800e!2s65100+Vaasa!5e0!3m2!1sfi!2sfi!4v1398346292271" width="800" height="650" frameborder="0" style="display: block; margin: 0 auto; border:0;"></iframe>
+-->
+
+<p>
+ In 2006 the city of Vaasa was celebrating its 400th year.<br>
+ I was active with the 56FL/VSA400 SES, but the amount of QSOs in the log is quite small because
+ I was only active from time to time and also the propagation was quite poor.
+</p>
+
+<div class="image" style="width: 300px; margin-left: auto; margin-right: auto;">
+ <img src="images/vsa400.gif" alt="400 years of Vaasa in 2006">
+ <div class="caption"><a href="http://www.fmi.fi/weather/local.html?kunta=Vaasa" target="_blank">Current weather at Vaasa</a></div>
+</div>
+
+<h2>Some pictures from Vaasa</h2>
+
+<div class="overlap-figure">
+ <div class="of-container">
+   <a href="images/vaasa/view-from-water-tower.jpg"><img src="images/vaasa/view-from-water-tower-preview.jpg" alt="View from the water tower"></a>
+   <div class="caption">
+     View from the water tower
+   </div>
+ </div>
+</div>
+
+<div class="overlap-figure">
+ <div class="of-container">
+   <a href="images/vaasa/hotel-astor.jpg"><img src="images/vaasa/hotel-astor-preview.jpg" alt="Hotel Astor at Vaasa downtown"></a>
+   <div class="caption">
+     Hotel Astor at Vaasa downtown
+   </div>
+ </div>
+</div>
+
+<div class="overlap-figure">
+ <div class="of-container">
+   <a href="images/vaasa/old-vaasa-ruin-area.jpg"><img src="images/vaasa/old-vaasa-ruin-area-preview.jpg" alt="Picture from the ruin area at old Vaasa"></a>
+   <div class="caption">
+     Picture from the ruin area at old Vaasa
+   </div>
+ </div>
+</div>
+
+<div class="overlap-figure">
+ <div class="of-container">
+   <a href="images/vaasa/aviation-monument.jpg"><img src="images/vaasa/aviation-monument-preview.jpg" alt="The monument for Finnish aviation"></a>
+   <div class="caption">
+     The monument for Finnish aviation (a Sea eagle)
+   </div>
+ </div>
+</div>
+
+<div class="overlap-figure">
+ <div class="of-container">
+   <a href="images/vaasa/vaasa-city-centre.jpg"><img src="images/vaasa/vaasa-city-centre-preview.jpg" alt="People walking in the city centre near Vaasa market square"></a>
+   <div class="caption">
+     People walking in the city centre near Vaasa market square
+   </div>
+ </div>
+</div>
+
+<div class="overlap-figure">
+ <div class="of-container">
+   <a href="images/vaasa/faros.jpg"><img src="images/vaasa/faros-preview.jpg" alt="Restaurant ship Faros"></a>
+   <div class="caption">
+     Restaurant ship <a href="http://www.faros.fi/en/">Faros</a> (ARLHS <a href="http://wlol.arlhs.com/lighthouse/FIN103.html">FIN-103</a>, <a href="http://www.lightphotos.net/photos/displayimage.php?album=15&amp;pid=7444">Lightship Kalbådagrund</a>) in the middle. The road on the left leads to the city centre.
+   </div>
+ </div>
+</div>
+
+<p>
+ All pictures: &copy; 56FL001, Timo
+</p>
+
+<h2>More info about Vaasa</h2>
+
+<p>
+ For more info about Vaasa you can visit:<br>
+ <a href="http://www.vaasa.fi/en">http://www.vaasa.fi/en</a>, <a href="http://www.visitvaasa.fi/en/">http://www.visitvaasa.fi/en/</a> and<br>
+ <a href="http://www1.vaasa.fi/yleisesiteweb/engpage/engdefault.htm">http://www1.vaasa.fi/yleisesiteweb/engpage/engdefault.htm</a>
+
+ <p>
+   And for more info about Ostrobothnia:<br>
+   <a href="http://www.pohjanmaa.fi/home-en/">http://www.pohjanmaa.fi/home-en/</a>
+ </p>
+
+ <p>
+   The Kvarken archipelago is on UNESCO's world heritage list:<br>
+   <a href="http://www.kvarkenworldheritage.fi">http://www.kvarkenworldheritage.fi</a>
+ </p>

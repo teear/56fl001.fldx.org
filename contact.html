@@ -1,0 +1,78 @@
+---
+layout: default
+---
+
+<script type="text/javascript">
+<!--
+function tarkistus() {
+	if (document.forms[0].name.value.length < 1)
+	{
+		window.alert("Name missing.");
+		document.forms[0].name.focus();
+		return false;
+	}
+	if (document.forms[0].email.value.length < 1)
+	{
+		window.alert("E-mail missing.");
+		document.forms[0].email.focus();
+		return false;
+	}
+	if (document.forms[0].comments.value.length < 1)
+	{
+		window.alert("Message missing.");
+		document.forms[0].comments.focus();
+		return false;
+	}
+	return true;
+}
+//-->
+</script>
+
+<h1>56FL001 Contact Information</h1>
+
+<p>
+	E-mail: fldxREMOVE@hotmail.com.invalid or 56fl001REMOVE@fldx.org.invalid<br>
+	(Remove texts "REMOVE" and ".invalid" from the addresses to send e-mail.)
+</p>
+
+<div id="address">
+	56FL001 QSL &amp; Mailing Address<br>
+	<img src="images/qsl_writing_smaller.jpg" alt="Some QSLs under work">
+	<span>
+		Timo<br>
+		P.O.Box 7<br>
+		65301 Vaasa<br>
+		Finland<br>
+	</span>
+</div>
+
+<p>
+	You can also use the contact form below
+</p>
+
+<div id="contact-form">
+	<form role="form" action="http://fldx.org/56fl001/FormToEmail.php" method="post" onsubmit="return tarkistus();">
+		<p>
+			<label for="call_name">Callsign/Name</label><br> <input size="30" name="name" id="call_name" type="text">
+		</p>
+
+		<p>
+			<label for="e-mail">E-mail</label><br> <input size="30" name="email" id="e-mail" type="text">
+		</p>
+
+		<p>
+			<label for="message">Comments</label><br><textarea name="comments" id="message" rows="10" cols="40"></textarea>
+		</p>
+
+		<p>
+			<input value="Send" type="submit" class="button">
+			<!-- <font face="arial" size="1">&nbsp;&nbsp;<a href="http://FormToEmail.com">PHP Form</a> by FormToEmail.com</font> -->
+		</p>
+	</form>
+</div>
+
+<script type="text/javascript">
+<!--
+document.forms[0].name.focus();
+// -->
+</script>
