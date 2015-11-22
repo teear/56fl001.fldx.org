@@ -3,7 +3,7 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
-  <title>{% if page.title %}{{ page.title }}{% else %}{{ site.title }}{% endif %}</title>
+  <title>{% if page.title %}{{ page.title }} &ndash; 56FL001 {% else %}{{ site.title }}{% endif %}</title>
   <meta name="author" content="56FL001 Timo">
   <meta name="description" content="{% if page.excerpt %}{{ page.excerpt | strip_html | strip_newlines | truncate: 160 }}{% else %}{{ site.description }}{% endif %}">
 
@@ -11,6 +11,15 @@
   <script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
   <script src="//cdnjs.cloudflare.com/ajax/libs/respond.js/1.1.0/respond.min.js"></script>
   <![endif]-->
+
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:site" content="@56fl001">
+  <meta name="twitter:domain" content="56fl001.fldx.org">
+  <meta name="twitter:creator" content="@56fl001">
+  <meta name="twitter:title" content="{{ page.title }} &ndash; 56FL001">
+  {% comment %}
+  <meta name="twitter:image:src" content="/logo.png">
+  {% endcomment %}
 
   <link rel="stylesheet" href="{{ "/css/main.css" | prepend: site.baseurl }}">
   <link rel="canonical" href="{{ page.url | replace:'index.html','' | prepend: site.baseurl | prepend: site.url }}">
