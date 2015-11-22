@@ -8,8 +8,7 @@
 # Site settings
 title: 56FL001's Radio Website
 email:
-description: > # this means to ignore newlines until "baseurl:"
-  56FL001's Radio Website
+description: 56FL001 Timo's Radio Website
 baseurl: "/56fl001.fldx.org" # the subpath of your site, e.g. /blog
 url: "http://teear.github.io" # the base hostname & protocol for your site
 twitter_username: 56fl001
