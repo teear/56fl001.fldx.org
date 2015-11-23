@@ -9,7 +9,7 @@
 title: 56FL001's Radio Website
 email:
 description: 56FL001 Timo's Radio Website
-baseurl: "http://56fl001.fldx.org/" # the subpath of your site, e.g. /blog
+baseurl: "http://56fl001.fldx.org" # the subpath of your site, e.g. /blog
 url: "http://56fl001.fldx.org" # the base hostname & protocol for your site
 twitter_username: 56fl001
 github_username:  teear
