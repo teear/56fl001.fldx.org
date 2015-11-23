@@ -353,26 +353,24 @@ iframe {
 .breadcrumb .left, .breadcrumb .right { display: none; }
 }
 
-
-
 /* daltonlp.com semi-transparent background */
-.trans_box2 {
+.transp-bg {
     font-family: 'Open Sans', 'sans-serif';
     font-weight: normal;
-    padding:40px;
-    margin:30px;
-    border:solid 1px #ccc; // oli #555 07-05-2014
+    padding: 40px;
+    margin: 0px auto auto;
+    width: 75%;
+    border: solid 1px #ccc;
     /* Mozilla ignores crazy MS image filters, so it will skip the following */
     filter:progid:DXImageTransform.Microsoft.AlphaImageLoader(enabled=true, sizingMethod=scale, src='{{ site.baseurl }}/images/75p_white_55p.png');
 }
 /* IE ignores styles with [attributes], so it will skip the following. */
-.trans_box2[class] {
+.transp-bg[class] {
     background-image:url({{ site.baseurl }}/images/75p_white_55p.png);
 }
 
 /* Fix for IE7 and below to keep the content from going under the footer */
-.lt-ie8 .trans_box2 { padding-bottom: 80px; }
-/* */
+.lt-ie8 .transp-bg { padding-bottom: 80px; }
 
 .content-inner {
     width: 95%;
@@ -629,4 +627,3 @@ caption overlapping figure http://codepen.io/adobe/pen/bhoGK
   }
   *zoom:1; /* For IE 6/7 (trigger hasLayout) */
 }
-
