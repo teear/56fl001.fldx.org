@@ -20,4 +20,3 @@ markdown: kramdown
 #
 gems:
   - jekyll-sitemap
-  - jekyll-redirect-from
