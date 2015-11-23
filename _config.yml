@@ -16,3 +16,7 @@ github_username:  teear
 
 # Build settings
 markdown: kramdown
+
+#
+gems:
+  - jekyll-sitemap
