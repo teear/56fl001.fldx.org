@@ -1,4 +1,6 @@
+assets
 _site
 .sass-cache
 .jekyll-metadata
+404.html
 blog.html
