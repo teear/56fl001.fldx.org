@@ -24,6 +24,7 @@ $footer-height: 60px; /* Does not adjust the position of #to-top */
 html, body {
     font-family: Verdana, Arial, Helvetica, sans-serif;
     font-size: 17px;
+    line-height: 1.6;
     @media all and (max-width: 800px) {
     font-size: 16px;
      }
@@ -465,8 +466,11 @@ caption overlapping figure http://codepen.io/adobe/pen/bhoGK
 
 
 
-
-
+/* UL-list in main content area */
+main ul {
+  list-style-type: outside none disc;
+  margin: 0 0 1em 1em;
+}
 
 /* UL-list callsigns */
 #callsigns {
