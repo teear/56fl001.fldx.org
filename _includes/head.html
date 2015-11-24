@@ -26,19 +26,4 @@
   <link rel="stylesheet" href="{{ "/css/main.css" | prepend: site.baseurl }}">
   <link rel="canonical" href="{{ page.url | replace:'index.html','' | prepend: site.baseurl | prepend: site.url }}">{% comment %}
   <link rel="alternate" type="application/rss+xml" title="{{ site.title }}" href="{{ "/feed.xml" | prepend: site.baseurl | prepend: site.url }}">{% endcomment %}
-    <script>
-    if (document.documentElement.clientWidth > 800) {
-    var oHead = document.getElementsByTagName('HEAD').item(0);
-    var oScript= document.createElement("script");
-    oScript.type = "text/javascript";
-    oScript.src="nicetitle.js";
-    oHead.appendChild(oScript);
-
-    var oStyle= document.createElement("link");
-    oStyle.rel = "stylesheet";
-    oStyle.type = "text/css";
-    oStyle.href="nicetitle.css";
-    oHead.appendChild(oStyle);
-    }
-    </script>
 </head>
