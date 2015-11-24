@@ -451,6 +451,10 @@ caption overlapping figure http://codepen.io/adobe/pen/bhoGK
   background-color: rgba(38,50,72, 0.5);
 }
 
+@media screen and (max-width: 800px){
+  .overlap-figure .caption { position: static; }
+}
+
 .overlap-figure a:link, .overlap-figure a:hover, .overlap-figure a:focus, .overlap-figure a:active, .overlap-figure a:visited {
     color: rgb(125, 198, 245);
     border-bottom: 1px solid rgb(125, 198, 245);
