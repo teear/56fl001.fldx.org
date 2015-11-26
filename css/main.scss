@@ -125,8 +125,14 @@ body:before {
 
 @media only screen and (max-width: 350px){
     #to-top {
-        display: none!important;
+        display: none !important;
     }
+}
+
+@media print {
+    #to-top {
+        display: none;
+    }   
 }
 
 /* iPad landscape fixes, see www.prostory.ca CSS */
