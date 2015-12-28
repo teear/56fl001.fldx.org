@@ -54,11 +54,11 @@ function tarkistus() {
 <div id="contact-form">
 	<form role="form" action="http://fldx.org/56fl001/FormToEmail.php" method="post" onsubmit="return tarkistus();">
 		<p>
-			<label for="call_name">Callsign/Name</label><br> <input size="30" name="name" id="call_name" type="text">
+			<label for="call_name">Callsign/Name</label><br> <input size="30" name="name" id="call_name" type="text" autocorrect="off" autocapitalize="words">
 		</p>
 
 		<p>
-			<label for="e-mail">E-mail</label><br> <input size="30" name="email" id="e-mail" type="text">
+			<label for="e-mail">E-mail</label><br> <input size="30" name="email" id="e-mail" type="text" autocapitalize="off" autocomplete="off" autocorrect="email">
 		</p>
 
 		<p>
