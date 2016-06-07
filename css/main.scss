@@ -132,7 +132,7 @@ body:before {
 @media print {
     #to-top {
         display: none;
-    }   
+    }
 }
 
 /* iPad landscape fixes, see www.prostory.ca CSS */
@@ -391,7 +391,7 @@ iframe {
 
 /* required for round image corners jquery plugin */
 /* #imgBox, #imgBox img { width:500px; height:375px; margin:0;padding:0 } */
-.center { margin-left: auto; margin-right: auto; }
+.center { margin-left: auto; margin-right: auto; text-align: center; }
 
 input:focus,
 textarea:focus {
@@ -583,15 +583,15 @@ main ul {
   @page { margin: 0.5cm; }
   p, h2, h3 { orphans: 3; widows: 3; }
   h2, h3 { page-break-after: avoid; }
-  
+
     .content-inner {
           width: 100%;
           max-width: 100%;
     }
-    
+
     #to-top {
         display: none;
-    }   
+    }
 }
 
 
