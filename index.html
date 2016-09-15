@@ -2,10 +2,20 @@
 layout: default
 ---
 
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js"></script>
-
-<script src="js/fitvids/jquery.fitvids.js"></script>
+<!--
 <script>
+var node = document.createElement('script');
+node.type = 'text/javascript';
+node.async = true;
+node.src = 'example.js';
+// Now insert the node into the DOM, perhaps using insertBefore()
+</script>
+-->
+
+<script async src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js"></script>
+
+<script async src="js/fitvids/jquery.fitvids.js"></script>
+<script async>
   $(document).ready(function(){
     // Target your .container, .wrapper, .post, etc.
     $("#video-container").fitVids();
