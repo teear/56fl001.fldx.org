@@ -501,7 +501,9 @@ main ul {
 }
 
 /* Banners on index page */
+.banners { @extend %clearfix; }
 .fl-banner { float: left; }
+.qrz11search { float: right; }
 
 /* Contact form styles */
 #contact-form { margin: 65px 25px; }
