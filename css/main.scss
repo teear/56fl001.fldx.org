@@ -501,9 +501,10 @@ main ul {
 }
 
 /* Banners on index page */
+.banners { margin: 25px 0; }
 @media all and (min-width: 1200px) {
 .banners { display: flex; }
-.fl-banner { margin: 25px; }
+.fl-banner { margin-right: 25px; }
 /*
 .banners { @extend %clearfix; }
 .fl-banner { float: left; }
