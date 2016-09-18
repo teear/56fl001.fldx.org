@@ -501,7 +501,7 @@ main ul {
 }
 
 /* Banners on index page */
-@media (all and min-width: 1200px){
+@media all and (min-width: 1200px){
 .banners { @extend %clearfix; }
 .fl-banner { float: left; }
 .qrz11search { float: right; }
