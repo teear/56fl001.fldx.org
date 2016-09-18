@@ -501,10 +501,13 @@ main ul {
 }
 
 /* Banners on index page */
-@media all and (min-width: 1000px){
+@media all and (min-width: 1300px){
+.banners { display: flex; }
+/*
 .banners { @extend %clearfix; }
 .fl-banner { float: left; }
 .qrz11search { float: right; }
+*/
 }
 
 /* Contact form styles */
