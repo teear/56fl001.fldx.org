@@ -501,9 +501,11 @@ main ul {
 }
 
 /* Banners on index page */
+@media (all and min-width: 1200px){
 .banners { @extend %clearfix; }
 .fl-banner { float: left; }
 .qrz11search { float: right; }
+}
 
 /* Contact form styles */
 #contact-form { margin: 65px 25px; }
