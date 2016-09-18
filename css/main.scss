@@ -500,6 +500,14 @@ main ul {
     border-radius: 15px;
 }
 
+/* News items on index page */
+.news-item {
+margin-left: -40px;
+margin-right: -40px;
+padding: 3px 3px 3px 40px;
+background: rgba(0, 0, 0, 0.1) none repeat scroll 0% 0%;
+}
+
 /* Banners on index page */
 .banners { margin: 25px 0; }
 @media all and (min-width: 1200px) {
