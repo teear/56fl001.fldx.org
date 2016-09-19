@@ -21,6 +21,10 @@
   oStyle.href="/nicetitle.css";
   oHead.appendChild(oStyle);
   }
+  if (document.documentElement.clientWidth =< 800 && (typeof oScript !== "undefined")) {
+  oScript.parentNode.removeChild(oScript);
+  oStyle.parentNode.removeChild(oStyle);
+  }
 </script>
 
 <!-- Google Analytics -->
