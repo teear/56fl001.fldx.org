@@ -23,7 +23,9 @@
   oStyle.href="/nicetitle.css";
   oStyle.id = "ntcss";
   oHead.appendChild(oScript);
-}}();
+}}
+
+  window.onload = nt();
 
   window.addEventListener('resize', function(event){
   if (document.documentElement.clientWidth <= 800 && (document.getElementById("ntjs") !== null)) { //&& (typeof oScript !== "undefined")
