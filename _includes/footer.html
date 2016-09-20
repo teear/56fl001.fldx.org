@@ -9,20 +9,26 @@
 </footer>
 
 <script>
-  if (document.documentElement.clientWidth > 800) {
+//  if (document.documentElement.clientWidth > 800) {
   var oHead = document.getElementsByTagName('HEAD').item(0);
   var oScript= document.createElement("script");
   oScript.type = "text/javascript";
   oScript.src ="/nicetitle.js";
   oScript.id = "ntjs";
-  oHead.appendChild(oScript);
+//  oHead.appendChild(oScript);
   var oStyle= document.createElement("link");
   oStyle.rel = "stylesheet";
   oStyle.type = "text/css";
   oStyle.href="/nicetitle.css";
   oStyle.id = "ntcss";
-  oHead.appendChild(oStyle);
+//  oHead.appendChild(oScript);
+//  }
+
+  if (document.documentElement.clientWidth > 800) {
+    oHead.appendChild(oScript);
+    oHead.appendChild(oScript);
   }
+
   window.addEventListener('resize', function(event){
   if (document.documentElement.clientWidth <= 800 && (document.getElementById("ntjs") !== null)) { //&& (typeof oScript !== "undefined")
   oScript.parentNode.removeChild(oScript);
