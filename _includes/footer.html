@@ -10,7 +10,6 @@
 
 <script>
   function nt() {
-  //if (document.documentElement.clientWidth > 800) {
   var oHead = document.getElementsByTagName('HEAD').item(0);
   var oScript= document.createElement("script");
   oScript.type = "text/javascript";
@@ -23,23 +22,8 @@
   oStyle.href="/nicetitle.css";
   oStyle.id = "ntcss";
   oHead.appendChild(oStyle);
-} //  }
-
+  }
   window.onload = nt();
-
-  /*
-  window.addEventListener('resize', function(event){
-  if (document.documentElement.clientWidth <= 800 && (document.getElementById("ntjs") !== null)) {
-  var ntjs = document.getElementById("ntjs");
-  ntjs.parentNode.removeChild(ntjs);
-  var ntcss = document.getElementById("ntcss");
-  ntcss.parentNode.removeChild(ntcss);
-  }
-  if (document.documentElement.clientWidth > 800 && (document.getElementById("ntjs") === null )) {
-    //nt();
-  }
-  });
-  */
 </script>
 
 <!-- Google Analytics -->
