@@ -13,19 +13,26 @@
   var oHead = document.getElementsByTagName('HEAD').item(0);
   var oScript= document.createElement("script");
   oScript.type = "text/javascript";
-  oScript.src="/nicetitle.js";
+  oScript.src ="/nicetitle.js";
+  oScript.id = "ntjs";
   oHead.appendChild(oScript);
   var oStyle= document.createElement("link");
   oStyle.rel = "stylesheet";
   oStyle.type = "text/css";
   oStyle.href="/nicetitle.css";
+  oStyle.id = "ntcss";
   oHead.appendChild(oStyle);
   }
   window.addEventListener('resize', function(event){
-  if (document.documentElement.clientWidth <= 800 && (typeof oScript !== "undefined")) {
+  if (document.documentElement.clientWidth <= 800 && (document.getElementById("ntjs") !== null)) { //&& (typeof oScript !== "undefined")
   oScript.parentNode.removeChild(oScript);
   oStyle.parentNode.removeChild(oStyle);
-  }});
+  }
+  if (document.documentElement.clientWidth > 800 && (document.getElementById("ntjs") === null )) {
+  oHead.appendChild(oScript);
+  oHead.appendChild(oStyle);
+  }
+  });
 </script>
 
 <!-- Google Analytics -->
