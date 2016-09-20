@@ -10,7 +10,7 @@
 
 <script>
   function nt() {
-  if (document.documentElement.clientWidth > 800) {
+  //if (document.documentElement.clientWidth > 800) {
   var oHead = document.getElementsByTagName('HEAD').item(0);
   var oScript= document.createElement("script");
   oScript.type = "text/javascript";
@@ -23,7 +23,7 @@
   oStyle.href="/nicetitle.css";
   oStyle.id = "ntcss";
   oHead.appendChild(oStyle);
-}}
+} //  }
 
   window.onload = nt();
 
