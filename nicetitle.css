@@ -19,3 +19,7 @@ div.nicetitle p.destination {
     text-align: left;
     padding-top: 3px;
 }
+
+@media all and (max-width: 800px) {
+  div.nicetitle { display: none; }
+}
