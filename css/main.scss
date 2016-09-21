@@ -12,11 +12,11 @@ $footer-height: 60px; /* Does not adjust the position of #to-top */
 
 /*
       Created by CSS Portal Layout Generator
-
       http://www.cssportal.com
-
 */
 
+
+/* Base styles */
 * { padding: 0; margin: 0; }
 
 html, body {
@@ -30,11 +30,6 @@ html, body {
 }
 
 body {
-    /* background moved from #content to body so it fills the full view down to the footer */
-    /* background: #cccccc url('EarthWP16_opac25_for_web.jpg') no-repeat center center; */  /* repeat-y */
-    /* background: #fff url('images/antennas-background.jpg') no-repeat center center;
-    background-attachment: fixed; */
-
       /* http://css-tricks.com/perfect-full-page-background-image/ */
       background: url({{ site.baseurl }}/images/antennas-background.jpg) no-repeat center center fixed;
       -webkit-background-size: cover;
@@ -150,7 +145,6 @@ p {
  /* padding:0 0 80px; */ /* bottom padding clears the #footer */
 }
 
-/* p.c { text-align: center; } */
 
 h1, h2 {
     font-family: "sansationregular", "Open Sans", Verdana, Arial, Helvetica, sans-serif;
@@ -169,11 +163,6 @@ h2 {
     color: #505a6b; /* rgba() fallback for color, does not seem to work in IE 10's IE7 mode (document mode) though, works in IE8 and for background-color in IE7 */
     color: rgba(38, 50, 72, 0.8);
 }
-/*
-h1 span {
-    color: #000000;
-}
-*/
 
 img table { border: 0px; }
 
@@ -306,19 +295,6 @@ iframe {
     @media only screen and (max-width: 800px) { display: none; }
 }
 
-
-//Vanhat
-#madewith {
-    width: 200px; display: inline; position: absolute; left: 75%;
-}
-
-#madewith a { text-decoration: none; border-bottom: none; }
-
-@media only screen and (max-width: 800px) {
-#madewith { display: none; }
-}
-
-#madewith a img { border: 0; vertical-align: text-bottom; }
 
 /* Generated via www.cssmenubuilder.com */
 .breadcrumb{position:relative; height:30px; width:100%; }
@@ -509,12 +485,8 @@ background: rgba(0, 0, 0, 0.06) none repeat scroll 0% 0%;
 @media all and (min-width: 1200px) {
 .banners { display: flex; }
 .fl-banner { margin-right: 25px; }
-/*
-.banners { @extend %clearfix; }
-.fl-banner { float: left; }
-.qrz11search { float: right; }
-*/
-}
+.qrz11search { margin-left: auto; }
+
 
 /* Contact form styles */
 #contact-form { margin: 65px 25px; }
@@ -610,68 +582,6 @@ background: rgba(0, 0, 0, 0.06) none repeat scroll 0% 0%;
 
 
 
-/*
-.button {
-    display: inline-block;
-    zoom: 1; /* zoom and *display = ie7 hack for display:inline-block */
-
-    /*
-
-    *display: inline;
-    vertical-align: baseline;
-    margin: 0 2px;
-    outline: none;
-    cursor: pointer;
-    text-align: center;
-    text-decoration: none;
-    font: 14px/100% Arial, Helvetica, sans-serif;
-    padding: .5em 2em .55em;
-    text-shadow: 0 1px 1px rgba(0,0,0,.3);
-    -webkit-border-radius: .5em;
-    -moz-border-radius: .5em;
-    border-radius: .5em;
-    -webkit-box-shadow: 0 1px 2px rgba(0,0,0,.2);
-    -moz-box-shadow: 0 1px 2px rgba(0,0,0,.2);
-    box-shadow: 0 1px 2px rgba(0,0,0,.2);
-}
-.button:hover {
-    text-decoration: none;
-}
-.button:active {
-    position: relative;
-    top: 1px;
-}
-*/
-
-/* white */
-
-/*
-.white {
-    color: #606060;
-    border: solid 1px #b7b7b7;
-    background: #fff;
-    background: -webkit-gradient(linear, left top, left bottom, from(#fff), to(#ededed));
-    background: -moz-linear-gradient(top,  #fff,  #ededed);
-    filter:  progid:DXImageTransform.Microsoft.gradient(startColorstr='#ffffff', endColorstr='#ededed');
-}
-.white:hover {
-    background: #ededed;
-    background: -webkit-gradient(linear, left top, left bottom, from(#fff), to(#dcdcdc));
-    background: -moz-linear-gradient(top,  #fff,  #dcdcdc);
-    filter:  progid:DXImageTransform.Microsoft.gradient(startColorstr='#ffffff', endColorstr='#dcdcdc');
-}
-.white:active {
-    color: #999;
-    background: -webkit-gradient(linear, left top, left bottom, from(#ededed), to(#fff));
-    background: -moz-linear-gradient(top,  #ededed,  #fff);
-    filter:  progid:DXImageTransform.Microsoft.gradient(startColorstr='#ededed', endColorstr='#ffffff');
-}
-
-.medium {
-    font-size: 12px;
-    padding: .4em 1.5em .42em;
-}
-*/
 
 
 /* Clearfix SCSS placeholder, use with @extend clearfix; where you need it */
