@@ -260,7 +260,7 @@ iframe {
     // Note that we would need to create a modernizr fallback for browsers that do not support multiple backgrounds, if this would
     // be a different background image not included in the multiple background images declaration (otherwise browsers that support
     // multiple background images would download this extra image unneccessarily.)
-    background: url('{{ site.baseurl }}/images/footer-bg.jpg') center center repeat;
+    background: #000 url('{{ site.baseurl }}/images/footer-bg.jpg') center center repeat;
 
     /* Multi-background supporting browsers */
     // First background image is on top: http://css-tricks.com/stacking-order-of-multiple-backgrounds/
