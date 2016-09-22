@@ -46,7 +46,8 @@ body {
 
 #content {
     overflow:auto;
-    //padding-bottom: $footer-height; /* must be same height as the footer */ //Is this required? It adds empty space between content and the footer.
+    padding-bottom: $footer-height; /* must be same height as the footer, must be used unless you float the #content */
+    //Is this required? It adds empty space between content and the footer.
 }
 
 #footer {position: relative;
