@@ -255,19 +255,21 @@ iframe {
     width: 100%;
     height: 75px;
 
-    background-color: #000000;
-
     /* Fallback for <IE9 and other older browsers */
     // Note that we would need to create a modernizr fallback for browsers that do not support multiple backgrounds, if this would
     // be a different background image not included in the multiple background images declaration (otherwise browsers that support
     // multiple background images would download this extra image unneccessarily.)
-    background: url('{{ site.baseurl }}/images/footer-bg.jpg') center center repeat;
+    background: #000 url('{{ site.baseurl }}/images/footer-bg.jpg') center center repeat;
 
     /* Multi-background supporting browsers */
     // First background image is on top: http://css-tricks.com/stacking-order-of-multiple-backgrounds/
-    background: url('{{ site.baseurl }}/images/Earth-07052014.png') right top no-repeat, url('{{ site.baseurl }}/images/footer-bg.jpg') center center repeat;
-}
+    background: #000 url('{{ site.baseurl }}/images/Earth-07052014.png') right top no-repeat, url('{{ site.baseurl }}/images/footer-bg.jpg') center center repeat;
 
+    //Narrow viewports
+    @media all and (max-width: 800px) {
+      background: #000 url('none');
+    }
+}
 
 
 #footer {
@@ -307,16 +309,7 @@ iframe {
 .breadcrumb .left{position:absolute; top:0px; left:0px; width:10px; height:30px; display:block; z-index:1; background: #222 url('{{ site.baseurl }}/breadcrumbImage.png') 0% 0px no-repeat;}
 .breadcrumb .right{position:absolute; top:0px; right:0px; width:10px; height:30px; display:block; z-index:1; background: #222 url('{{ site.baseurl }}/breadcrumbImage.png') 100% -90px no-repeat; }
 
-
-@media only screen and (max-width: 800px) {
-
-#header {
-    color: #333;
-    width: 100%;
-    height: 75px;
-    background: #000000 url('none');
-}
-
+@media all and (max-width: 800px) {
 /* Generated via www.cssmenubuilder.com */
 .breadcrumb { position: static; height: 180px; }
 .breadcrumb ul { position: relative; margin: 0; background-image: none; background-color: #333; text-align: center; }
@@ -325,6 +318,7 @@ iframe {
 .breadcrumb ul li a:hover { background-color: #222; }
 .breadcrumb .left, .breadcrumb .right { display: none; }
 }
+
 
 /* daltonlp.com semi-transparent background */
 .transp-bg {
