@@ -41,19 +41,19 @@ body {
 }
 
 /* footer to bottom, regardless of amount of content */
-#wrapper {min-height: 100%;}
+#wrapper { min-height: 100%; }
 
 
 #content {
     overflow:auto;
-    padding-bottom: $footer-height; /* must be same height as the footer, must be used unless you float the #content */
-    //Is this required? It adds empty space between content and the footer.
+    padding-bottom: $footer-height; /* must be same height as the footer and must be used unless you float #content */
 }
 
-#footer {position: relative;
+#footer {
+    position: relative;
     margin-top: -$footer-height; /* negative value of footer height */
     height: $footer-height;
-    clear:both; }
+}
 
 /*Opera Fix*/
 /* Compass reports invalid SCSS because of / in the margin-top property
@@ -235,6 +235,8 @@ iframe {
     border: 0;
 }
 
+
+
 #wrapper {
     margin: 0 auto;
     width: 100%;
@@ -244,6 +246,8 @@ iframe {
     color: #000;
     width: 100%;
 }
+
+
 
 
 #header {
@@ -267,14 +271,11 @@ iframe {
 
 
 #footer {
-    /* defined at the top of this stylesheet
-    width: 100%;
-    height: 35px;
-    clear: both; */
+    /* Sticky footer styles are defined at the top of this stylesheet */
     color: #fff;
     background: #252525 url('{{ site.baseurl }}/images/footer-bg.jpg') repeat center center;
     text-align: center;
-    line-height: $footer-height; /* Footer height */
+    line-height: $footer-height; /* Footer height, centers one line of text vertically */
 }
 
 #social {
@@ -313,7 +314,7 @@ iframe {
     color: #333;
     width: 100%;
     height: 75px;
-    background:#000000 url('none');
+    background: #000000 url('none');
 }
 
 /* Generated via www.cssmenubuilder.com */
