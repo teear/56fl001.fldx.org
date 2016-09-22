@@ -266,15 +266,11 @@ iframe {
     // First background image is on top: http://css-tricks.com/stacking-order-of-multiple-backgrounds/
     background: url('{{ site.baseurl }}/images/Earth-07052014.png') right top no-repeat, url('{{ site.baseurl }}/images/footer-bg.jpg') center center repeat;
 
-    //Narrow viewports, if the rule is here, only the earth image on the multi-background declaration appears back in FF after resize
+    //Narrow viewports
     @media all and (max-width: 800px) {
     background: #000 url('none');
     }
 }
-//Narrow viewports, if the rule is here, both images on the multi-background declaration appear back in FF after resize
-/* @media all and (max-width: 800px) {
-  #header { background: #000 url('none'); }
-}*/
 
 
 #footer {
