@@ -298,9 +298,10 @@ iframe {
 .breadcrumb{position:relative; height:30px; width:100%; }
 .breadcrumb ul{position:relative; margin:0 5px 0 5px; padding:0; height:30px; background:url('{{ site.baseurl }}/breadcrumbImage.png') 0px -30px repeat-x; }
 .breadcrumb ul li{padding:0; margin:0; list-style:none; float:left; height:30px; display:inline;}
-.breadcrumb ul li a{font-size: 14px; color:rgb(255,255,255); border: none; /*
-  color:rgb(255,255,255); text-decoration:none; border: none; line-height:30px; display:block; */
-  /* Pystyt linkkien välissä background:url('{{ site.baseurl }}/breadcrumbImage.png') 100% -60px no-repeat; */ padding:0 17px 0 15px; }
+.breadcrumb ul li a{font-size: 14px; color:rgb(255,255,255); text-decoration:none; border: none; line-height:30px;
+  display:block;
+  /* Pystyt linkkien välissä background:url('{{ site.baseurl }}/breadcrumbImage.png') 100% -60px no-repeat; */
+  padding:0 17px 0 15px; }
 .breadcrumb ul li a:hover {text-decoration:none; color:rbg(255,255,255);}
 .breadcrumb ul li a.active{background:none; color:rgb(255,255,255);}
 .breadcrumb ul li a.active:hover {text-decoration:none;}
@@ -319,13 +320,11 @@ iframe {
 }
 
 /* Generated via www.cssmenubuilder.com */
-.breadcrumb{position:static; height: 180px; width:100%; }
-.breadcrumb ul {position:relative; margin:0; padding:0; height:30px; background:#333; background-image: none;  text-align:center; }
-.breadcrumb ul li{padding:0; margin:0; list-style:none; height:30px; display:inline; float: none;}
-.breadcrumb ul li a{font-size:14px; color:rgb(255,255,255); text-decoration:none; line-height:30px; display:block; background-image: none; background: #333;  }
-.breadcrumb ul li a:hover {text-decoration:none; color:rbg(255,255,255); background-color: #222; }
-.breadcrumb ul li a.active{background:none; color:rgb(255,255,255);}
-.breadcrumb ul li a.active:hover {text-decoration:none;}
+.breadcrumb { position: static; height: 180px; }
+.breadcrumb ul { position: relative; margin: 0; background-image: none; background-color: #333; text-align: center; }
+.breadcrumb ul li { height: 30px; float: none; }
+.breadcrumb ul li a { background-image: none; background-color: #333; }
+.breadcrumb ul li a:hover { background-color: #222; }
 .breadcrumb .left, .breadcrumb .right { display: none; }
 }
 
@@ -356,9 +355,9 @@ iframe {
     .content-inner { width: 65%; }
 }
 
-/* required for round image corners jquery plugin */
-/* #imgBox, #imgBox img { width:500px; height:375px; margin:0;padding:0 } */
+
 .center { margin-left: auto; margin-right: auto; text-align: center; }
+
 
 input:focus,
 textarea:focus {
