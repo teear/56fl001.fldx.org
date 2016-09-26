@@ -296,13 +296,52 @@ iframe {
 }
 
 
+/* Site navigation */
+nav ul {
+    list-style: none;
+    margin-left: 0;
+}
+    nav li,
+        nav li > a {
+            display:inline-block;
+           *display:inline;
+            zoom:1;
+    }
+
+
+.site-nav {
+    width: 100%;
+    heigth: 30px;
+    background-color: #222;
+}
+        .site-nav a {
+            padding: 5px 10px;
+            color: #fff;
+            text-decoration: none;
+        }
+
+.site-nav {
+  a:hover, a:focus, a:active {
+    background-color: #333;
+  }
+}
+
+@media all and (max-width: 800px) {
+  .site-nav ul { padding-left: 0; text-align: center; }
+  .site-nav li, .site-nav a { display: block; }
+}
+/* Site navigation END */
+
+
 /* Generated via www.cssmenubuilder.com */
+/*
 .breadcrumb { position:relative; height:30px; width:100%; @extend %clearfix; }
 .breadcrumb ul{position:relative; margin:0 5px 0 5px; padding:0; height:30px; background: #222 url('{{ site.baseurl }}/breadcrumbImage.png') 0px -30px repeat-x; }
 .breadcrumb ul li{padding:0; margin:0; list-style:none; float:left; height:30px; display:inline;}
 .breadcrumb ul li a{font-size: 14px; color:rgb(255,255,255); text-decoration:none; border: none; line-height:30px;
   display:block;
   /* Pystyt linkkien välissä background:url('{{ site.baseurl }}/breadcrumbImage.png') 100% -60px no-repeat; */
+/*
   padding:0 17px 0 15px; }
 .breadcrumb ul li a:hover {text-decoration:none; color:rbg(255,255,255);}
 .breadcrumb ul li a.active{background:none; color:rgb(255,255,255);}
@@ -312,6 +351,7 @@ iframe {
 
 @media all and (max-width: 800px) {
 /* Generated via www.cssmenubuilder.com */
+/*
 .breadcrumb { position: static; height: 180px; }
 .breadcrumb ul { position: relative; margin: 0; background-image: none; background-color: #333; text-align: center; }
 .breadcrumb ul li { height: 30px; float: none; }
@@ -319,7 +359,7 @@ iframe {
 .breadcrumb ul li a:hover { background-color: #222; }
 .breadcrumb .left, .breadcrumb .right { display: none; }
 }
-
+*/
 
 /* daltonlp.com semi-transparent background */
 .transp-bg {
