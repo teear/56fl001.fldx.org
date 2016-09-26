@@ -8,13 +8,13 @@
 
 <script>
   function nt() {
+  var oHead = document.getElementsByTagName('HEAD').item(0);
   var oStyle= document.createElement("link");
   oStyle.rel = "stylesheet";
   oStyle.type = "text/css";
   oStyle.href="/nicetitle.css";
   oStyle.id = "ntcss";
   oHead.appendChild(oStyle);
-  var oHead = document.getElementsByTagName('HEAD').item(0);
   var oScript= document.createElement("script");
   oScript.type = "text/javascript";
   oScript.src ="/nicetitle.js";
