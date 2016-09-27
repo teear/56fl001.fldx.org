@@ -506,6 +506,14 @@ background: rgba(0, 0, 0, 0.06) none repeat scroll 0% 0%;
 .qrz11search { margin-left: auto; }
 }
 
+/* .item-list, ul with no ul styling */
+.item-list {
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
+}
+
+
 /* Contact form styles */
 #contact-form { margin: 65px 25px; }
 
