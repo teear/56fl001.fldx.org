@@ -147,17 +147,17 @@ p {
 
 
 h1, h2 {
-    font-family: "league-gothic", "Open Sans", Verdana, Arial, Helvetica, sans-serif;
+    font-family: "league-gothic", Verdana, Arial, Helvetica, sans-serif;
     font-weight: 400;
     color: rgba(104, 102, 102, 1);
     line-height: 1.2;
 }
 h1 {
-    font-size: 33px;
+    font-size: 35px;
     margin: 25px 0 25px;
 }
 h2 {
-    font-size: 29px;
+    font-size: 30px;
     text-transform: capitalize;
     margin: 38px 0 25px;
     color: #505a6b; /* rgba() fallback for color, does not seem to work in IE 10's IE7 mode (document mode) though, works in IE8 and for background-color in IE7 */
@@ -413,7 +413,7 @@ caption overlapping figure http://codepen.io/adobe/pen/bhoGK
 
   border: 1px solid #ccc;
   padding: 3px;
-  font-size: 14px;
+  font-size: 16px;
   color: #fff;
   margin: 35px 0 0;
 }
