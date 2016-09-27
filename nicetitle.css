@@ -7,7 +7,7 @@ div.nicetitle {
     font-size: 17px;
     font-family: "proxima-nova", Verdana, Helvetica, Arial, sans-serif;
     width: 25em;
-    font-weight: bold;
+    /* font-weight: bold; */
     background: url(images/ntbg.png);
     border-radius: 8px;
 }
