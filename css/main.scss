@@ -31,6 +31,11 @@ html, body {
     height: 100%; /* height + html & body here gets footer to bottom */
 }
 
+.wf-inactive body,
+.wf-loading body {
+  font-size: 16px;
+}
+
 body {
       /* http://css-tricks.com/perfect-full-page-background-image/ */
       background: url({{ site.baseurl }}/images/antennas-background.jpg) no-repeat center center fixed;
