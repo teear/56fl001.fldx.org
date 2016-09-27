@@ -156,6 +156,12 @@ h1 {
     font-size: 35px;
     margin: 25px 0 25px;
 }
+
+.wf-inactive h1,
+.wf-loading h1 {
+  font-size: 29px;
+}
+
 h2 {
     font-size: 30px;
     text-transform: capitalize;
@@ -163,6 +169,12 @@ h2 {
     color: #505a6b; /* rgba() fallback for color, does not seem to work in IE 10's IE7 mode (document mode) though, works in IE8 and for background-color in IE7 */
     color: rgba(38, 50, 72, 0.8);
 }
+
+.wf-inactive h2,
+.wf-loading h2 {
+  font-size: 22px;
+}
+
 
 img table { border: 0px; }
 
