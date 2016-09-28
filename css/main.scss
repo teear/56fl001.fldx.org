@@ -166,10 +166,10 @@ h1 {
 
 .wf-loading h1 {
   font-size: 29px;
-  -webkit-transition: font-size 1s ease-in;
-  -moz-transition: font-size 1s ease-in;
-  -o-transition: font-size 1s ease-in;
-  transition: font-size 1s ease-in;
+  -webkit-transition: font 1s ease-in;
+  -moz-transition: font 1s ease-in;
+  -o-transition: font 1s ease-in;
+  transition: font 1s ease-in;
 }
 
 .wf-inactive h1, .wf-active h1 {
