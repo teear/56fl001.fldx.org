@@ -166,15 +166,13 @@ h1 {
 
 .wf-loading h1 {
   font-size: 29px;
-  opacity: 0;
-  -webkit-transition: opacity 0.4s ease-in;
-  -moz-transition: opacity 0.4s ease-in;
-  -o-transition: opacity 0.4s ease-in;
-  transition: opacity 0.4s ease-in;
+  -webkit-transition: font-size 0.4s ease-in;
+  -moz-transition: font-size 0.4s ease-in;
+  -o-transition: font-size 0.4s ease-in;
+  transition: font-size 0.4s ease-in;
 }
 
 .wf-inactive h1, .wf-active h1 {
-  opacity: 1;
 }
 
 h2 {
