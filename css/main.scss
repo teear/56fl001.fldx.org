@@ -19,9 +19,20 @@ $footer-height: 60px; /* Does not adjust the position of #to-top */
 /* Base styles */
 * { padding: 0; margin: 0; }
 
+html, body {
+    height: 100%; /* height + html & body here gets footer to bottom */
+}
+
 img, iframe { max-width: 100%; }
 
-html, body {
+body {
+    /* http://css-tricks.com/perfect-full-page-background-image/ */
+    background: url({{ site.baseurl }}/images/antennas-background.jpg) no-repeat center center fixed;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+
     font-family: "Proxima Nova Regular", "Segoe UI", Roboto, "Droid Sans", "Helvetica Neue", Arial, sans-serif;
     font-style: normal;
     font-weight: 400;
@@ -30,7 +41,6 @@ html, body {
     @media all and (max-width: 800px) {
     font-size: 16px;
      }
-    height: 100%; /* height + html & body here gets footer to bottom */
 }
 
 .wf-inactive body,
@@ -38,14 +48,6 @@ html, body {
   font-size: 16px;
 }
 
-body {
-      /* http://css-tricks.com/perfect-full-page-background-image/ */
-      background: url({{ site.baseurl }}/images/antennas-background.jpg) no-repeat center center fixed;
-      -webkit-background-size: cover;
-      -moz-background-size: cover;
-      -o-background-size: cover;
-      background-size: cover;
-}
 
 /* footer to bottom, regardless of amount of content */
 #wrapper { min-height: 100%; }
@@ -76,7 +78,7 @@ body:before {
 
 /* Back to top */
 
-/* Remove the font-variant of i element to italic */
+/* Remove the font-variant: italic of i element */
 .icon-angle-up {
     font-style: normal;
 }
@@ -154,8 +156,9 @@ p {
 
 
 h1, h2 {
-    font-family: "league-gothic", Verdana, Arial, Helvetica, sans-serif;
-    font-weight: 400;
+    //font-family: "league-gothic", Verdana, Arial, Helvetica, sans-serif;
+    font-family: "kulturista-web", serif;
+    font-weight: 600;
     color: #444;
     line-height: 1.2;
     -webkit-transition: font 0.3s ease-in;
@@ -257,6 +260,7 @@ iframe {
 }
 
 
+/* Containers */
 
 #wrapper {
     margin: 0 auto;
@@ -267,6 +271,32 @@ iframe {
     color: #000;
     width: 100%;
 }
+
+
+/* daltonlp.com semi-transparent background */
+.transp-bg {
+    padding: 40px;
+    margin: 0px auto auto;
+    width: 75%;
+    border: solid 1px #ccc;
+    background-image:url({{ site.baseurl }}/images/75p_white_55p.png);
+}
+
+/* Fix for IE7 and below to keep the content from going under the footer */
+.lt-ie8 .transp-bg { padding-bottom: 80px; }
+
+
+.content-inner {
+    width: 95%;
+    max-width: 900px;
+    margin: 0 auto;
+}
+
+@media screen and (min-width: 1700px){
+    .content-inner { width: 65%; }
+}
+
+/* Containers END */
 
 
 
@@ -356,37 +386,6 @@ nav ul {
 /* Site navigation END */
 
 
-/* daltonlp.com semi-transparent background */
-.transp-bg {
-    padding: 40px;
-    margin: 0px auto auto;
-    width: 75%;
-    border: solid 1px #ccc;
-    /* Mozilla ignores crazy MS image filters, so it will skip the following */
-    filter:progid:DXImageTransform.Microsoft.AlphaImageLoader(enabled=true, sizingMethod=scale, src='{{ site.baseurl }}/images/75p_white_55p.png');
-}
-/* IE ignores styles with [attributes], so it will skip the following. */
-.transp-bg[class] {
-    background-image:url({{ site.baseurl }}/images/75p_white_55p.png);
-}
-
-/* Fix for IE7 and below to keep the content from going under the footer */
-.lt-ie8 .transp-bg { padding-bottom: 80px; }
-
-.content-inner {
-    width: 95%;
-    max-width: 900px;
-    margin: 0 auto;
-}
-
-@media screen and (min-width: 1700px){
-    .content-inner { width: 65%; }
-}
-
-
-.center { margin-left: auto; margin-right: auto; text-align: center; }
-
-
 input:focus,
 textarea:focus {
     background-color: #fcfcfc;
@@ -462,8 +461,6 @@ caption overlapping figure http://codepen.io/adobe/pen/bhoGK
 
 
 
-//Youtube-video container (http://embedresponsively.com/)
-.embed-container { position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden; max-width: 100%; } .embed-container iframe, .embed-container object, .embed-container embed { position: absolute; top: 0; left: 0; width: 100%; height: 100%; }
 
 
 
@@ -611,9 +608,15 @@ background: rgba(0, 0, 0, 0.06) none repeat scroll 0% 0%;
 
 
 
+/* Utility */
+
+//Youtube-video container (http://embedresponsively.com/)
+.embed-container { position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden; max-width: 100%; } .embed-container iframe, .embed-container object, .embed-container embed { position: absolute; top: 0; left: 0; width: 100%; height: 100%; }
+
+//Center things
+.center { margin-left: auto; margin-right: auto; text-align: center; }
 
 /* Clearfix SCSS placeholder, use with @extend %clearfix; where you need it */
-
 %clearfix {
   /* For modern browsers */
   &:before, &:after {
