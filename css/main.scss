@@ -54,12 +54,12 @@ body {
     line-height: 1.6;
     @media all and (max-width: 800px) {
     @include font-size(16);
-     }
+    }
 }
 
 .wf-inactive body,
 .wf-loading body {
-  font-size: 16px;
+    @include font-size(16);
 }
 
 
@@ -181,16 +181,16 @@ h1, h2 {
     transition: font 0.3s ease-in;
 }
 h1 {
-    font-size: 37px;
+    @include font-size(35);
     margin: 25px 0 25px;
 }
 
 .wf-loading h1 {
-  font-size: 29px;
+  @include font-size(29);
 }
 
 h2 {
-    font-size: 33px;
+    @include font-size(31);
     text-transform: capitalize;
     margin: 38px 0 25px;
     color: #505a6b; /* rgba() fallback for color, does not seem to work in IE 10's IE7 mode (document mode) though, works in IE8 and for background-color in IE7 */
@@ -198,7 +198,7 @@ h2 {
 }
 
 .wf-loading h2 {
-  font-size: 22px;
+  @include font-size(22);
 }
 
 
@@ -348,7 +348,7 @@ iframe {
 
 #social {
     width: 200px; display: inline; position: absolute; left: 70%;
-    font-size: 18px;
+    @include font-size(18);
     a {
         display: inline-block; margin-left: 10px;
         text-decoration: none; border-bottom: none; color: #fff;
@@ -383,7 +383,7 @@ nav ul {
         .site-nav a {
             padding: 5px 10px;
             color: #fff;
-            font-size: 15px;
+            @include font-size(15);
             text-decoration: none;
         }
 
@@ -447,7 +447,7 @@ caption overlapping figure http://codepen.io/adobe/pen/bhoGK
 
   border: 1px solid #ccc;
   padding: 3px;
-  font-size: 16px;
+  @include font-size(16);
   color: #fff;
   margin: 35px 0 0;
 }
@@ -567,7 +567,7 @@ background: rgba(0, 0, 0, 0.06) none repeat scroll 0% 0%;
     border-radius: 2px !important;
     border: 2px solid rgba(255, 255, 255, 0.75);
     font: 14px/100% Arial, Helvetica, sans-serif;
-    font-size: 13px;
+    @include font-size(13);
     font-weight: 600;
     padding: 15px 22px;
     text-transform: uppercase;
