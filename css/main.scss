@@ -33,10 +33,10 @@ body {
     -o-background-size: cover;
     background-size: cover;
 
-    font-family: "source-sans-pro", "Segoe UI", Roboto, "Droid Sans", "Helvetica Neue", Arial, sans-serif;
+    font-family: "proxima-nova", "Segoe UI", Roboto, "Droid Sans", "Helvetica Neue", Arial, sans-serif;
     font-style: normal;
     font-weight: 400;
-    font-size: 17px;
+    font-size: 22px;
     line-height: 1.6;
     @media all and (max-width: 800px) {
     font-size: 16px;
@@ -268,7 +268,7 @@ iframe {
  }
 
 #content {
-    color: #000;
+    color: #444;
     width: 100%;
 }
 
