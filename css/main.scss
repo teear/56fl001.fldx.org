@@ -31,6 +31,9 @@ $footer-height: 60px; /* Does not adjust the position of #to-top */
 
 html {
     font-size: 100%;
+    @media all and (max-width: 800px) {
+    font-size: 95%;
+    }
 }
 
 html, body {
@@ -53,7 +56,7 @@ body {
     @include font-size(19);
     line-height: 1.6;
     @media all and (max-width: 800px) {
-    @include font-size(16);
+    //@include font-size(16);
     }
 }
 
