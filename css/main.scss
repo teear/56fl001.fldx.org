@@ -297,6 +297,10 @@ iframe {
     width: 75%;
     border: solid 1px #ccc;
     background-image:url({{ site.baseurl }}/images/75p_white_55p.png);
+    @media all and (max-width: 800px) {
+    width: 95%;
+    padding: 15px;
+    }
 }
 
 /* Fix for IE7 and below to keep the content from going under the footer */
