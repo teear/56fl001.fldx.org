@@ -217,6 +217,10 @@ a {
     text-decoration: none;
     border-bottom: 1px #333 solid;
     color: rgba(13, 98, 226, 0.9);
+
+    /* Let's make long links wrap */
+    /* https://css-tricks.com/snippets/css/prevent-long-urls-from-breaking-out-of-container/ */
+    @include word-wrap();
 }
 
 a:visited {
@@ -646,4 +650,19 @@ background: rgba(0, 0, 0, 0.06) none repeat scroll 0% 0%;
     clear: both;
   }
   *zoom:1; /* For IE 6/7 (trigger hasLayout) */
+}
+
+
+/* Let's make long links wrap */
+/* https://css-tricks.com/snippets/css/prevent-long-urls-from-breaking-out-of-container/ */
+
+@mixin word-wrap() {
+  overflow-wrap: break-word;
+  word-wrap: break-word;
+  -ms-word-break: break-all;
+  word-break: break-word;
+  -ms-hyphens: auto;
+  -moz-hyphens: auto;
+  -webkit-hyphens: auto;
+  hyphens: auto;
 }
