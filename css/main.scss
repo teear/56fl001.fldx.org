@@ -385,6 +385,7 @@ nav ul {
             padding: 5px 10px;
             color: #fff;
             @include font-size(15);
+            border-bottom: none;
             text-decoration: none;
         }
 
