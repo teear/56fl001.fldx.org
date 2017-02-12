@@ -42,3 +42,11 @@
 
 //Center things
 .center { margin-left: auto; margin-right: auto; text-align: center; }
+
+//Content only for screen reader users
+.sr-only {
+    display: inline-block;
+    height: 0;
+    width: 0;
+    overflow: hidden;
+}
