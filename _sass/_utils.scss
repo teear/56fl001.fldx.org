@@ -48,17 +48,22 @@
 }
 
 .skip-main:focus, .skip-main:active {
-    //color: ;
-    background-color: #fff;
-    left: auto;
-    top: auto;
+    display: block;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    margin: 0 auto;
     width: auto;
     height: auto;
     overflow: auto;
     padding: 0.5em 1em;
+    z-index: 999;
+
+    color: #222;
+    background-color: #fff;
     text-align: center;
     font-size: 1.2em;
-    z-index: 999;
 }
 
 //Youtube-video container (http://embedresponsively.com/)
