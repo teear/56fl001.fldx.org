@@ -348,8 +348,14 @@ iframe {
 }
 
 #social {
-    width: 200px; display: inline; position: absolute; left: 70%;
+    width: 200px;
+    position: absolute;
+    left: 70%;
+    list-style-type: none;
     @include font-size(18);
+    li {
+        display: inline-block;
+    }
     a {
         display: inline-block; margin-left: 10px;
         text-decoration: none; border-bottom: none; color: #fff;
