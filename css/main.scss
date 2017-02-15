@@ -201,9 +201,13 @@ http://www.w3schools.com/css/css_pseudo_classes.asp
 */
 
 a {
+    border-bottom: 1px #00a6d2 solid;
+    color: #00a6d2;
     text-decoration: none;
+    /*
     border-bottom: 1px #333 solid;
     color: rgba(13, 98, 226, 0.9);
+    */
 
     /* Let's make long links wrap */
     /* https://css-tricks.com/snippets/css/prevent-long-urls-from-breaking-out-of-container/ */
