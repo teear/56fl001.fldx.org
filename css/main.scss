@@ -158,12 +158,11 @@ body:before {
 
 p {
     margin: 10px 0 10px;
-    line-height: 1.5;
+    //line-height: 1.5;
 }
 
 
 h1, h2 {
-    //font-family: "league-gothic", Verdana, Arial, Helvetica, sans-serif;
     font-family: "kulturista-web", "Times New Roman", serif;
     font-weight: 600;
     color: #444;
@@ -384,7 +383,7 @@ nav ul {
 
 .site-nav {
     width: 100%;
-    heigth: 30px;
+    height: 30px;
     background-color: #222;
 }
         .site-nav a {
