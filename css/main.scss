@@ -228,13 +228,14 @@ a#contact:visited {
     text-decoration: none;
     padding-bottom: 1px;
     border-bottom: none;
+    transition: color 0.3s, border 0.3s;
 }
 
 a#contact:hover,
 a#contact:focus,
 a#contact:active {
-    color: #fff;
-    border-bottom: 1px solid #fff;
+    color: #f1f18b;
+    border-bottom: 2px solid #f1f18b;
 }
 
 
