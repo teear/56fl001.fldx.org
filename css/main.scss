@@ -346,6 +346,10 @@ iframe {
     line-height: $footer-height; /* Footer height, centers one line of text vertically */
 }
 
+.site-footer svg {
+  fill: currentColor;
+}
+
 #social {
     width: 200px;
     position: absolute;
@@ -356,15 +360,35 @@ iframe {
         display: inline-block;
     }
     a {
-        display: inline-block; margin-left: 10px;
+        display: inline-block; margin-left: 6px;
         text-decoration: none; border-bottom: none; color: #fff;
+        /*
         &:hover, &:active, &:focus { .icon-twitter { color: #00aced; } }
         &:hover, &:active, &:focus { .icon-facebook { color: #3b5998; } }
         &:hover, &:active, &:focus { .icon-youtube { color: #bb0000; } }
         &:hover, &:active, &:focus { .icon-flickr { color: #0063dc; } }
+        */
     }
     @media only screen and (max-width: 800px) { display: none; }
 }
+
+
+.social-twitter {
+    &:hover svg, &:active svg, &:focus svg {
+    fill: #00aced;
+}}
+.social-fb {
+    &:hover svg, &:active svg, &:focus svg {
+    fill: #3b5998;
+}}
+.social-yt {
+    &:hover svg, &:active svg, &:focus svg {
+    fill: #bb0000;
+}}
+.social-flr {
+    &:hover svg, &:active svg, &:focus svg {
+    fill: #0063dc;
+}}
 
 
 /* Site navigation */
