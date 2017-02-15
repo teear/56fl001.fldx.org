@@ -113,20 +113,21 @@ body:before {
     border-bottom: none; //remove the bottom border which is defined for links
 }
 
-#to-top i {
-    line-height: 29px !important;
-    width: 29px !important;
-    height: 29px !important;
-    font-size: 14px !important;
-    top: 0px !important;
-    left: 0px !important;
-    text-align: center !important;
-    background-color: transparent !important;
+#to-top svg {
+    margin: auto;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    fill: currentColor;
 }
 
+/*
 #to-top .fallback { display: none; }
 .lt-ie8 #to-top .icon-arrow-up { display: none; }
 .lt-ie8 #to-top .fallback { display: block; color: #fff; }
+*/
 
 @media only screen and (min-width: 350px) and (max-width: 800px) {
     #to-top {
