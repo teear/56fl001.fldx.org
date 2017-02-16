@@ -524,7 +524,6 @@ caption overlapping figure http://codepen.io/adobe/pen/bhoGK
   width: 800px; /* .overlap-figure images must be at least 800px wide to be centered in the container and to fill the div */
   max-width: 100%;
 
-  border: 1px solid #ccc;
   padding: 3px;
   @include font-size(16);
   color: #fff;
