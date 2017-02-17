@@ -59,7 +59,7 @@
   var copyr = document.getElementById('c');
   var fillColor = copyr.getAttribute("fill");
   ctl.addEventListener('mouseenter', function(){ copyr.setAttribute('fill', '#f1f18b'); });
-  ctl.addEventListener('mouseleave', function(){ document.getElementById('copyr').setAttribute('fill', fillColor); });
+  ctl.addEventListener('mouseleave', function(){ copyr.setAttribute('fill', fillColor); });
   /*
   ctl.addEventListener('mouseenter', function(){ document.getElementById('copyr').classList.add('spinning'); });
   ctl.addEventListener('mouseleave', function(){ document.getElementById('copyr').classList.remove('spinning'); });
