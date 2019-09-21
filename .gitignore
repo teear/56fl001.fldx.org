@@ -4,3 +4,4 @@ _site
 .sass-cache
 .jekyll-metadata
 blog.html
+debug.log
