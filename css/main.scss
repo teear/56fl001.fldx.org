@@ -261,7 +261,11 @@ a.newqsl { font-weight: bold; }
 
 #address { @extend %clearfix; }
 #address img { float: left; margin: 15px; }
-#address div { display: block; margin-top: 25px; }
+#address div { 
+	display: block;
+	float: left;
+	margin: 10px 0 0 15px;
+}
 
 @media only screen and (max-width: 450px) {
 #address img { display: none; }
