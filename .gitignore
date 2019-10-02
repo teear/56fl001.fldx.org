@@ -2,6 +2,7 @@ assets
 src
 _site
 .sass-cache
+.jekyll-cache
 .jekyll-metadata
 blog.html
 debug.log
