@@ -28,7 +28,10 @@ html, body {
     height: 100%; /* height + html & body here gets footer to bottom */
 }
 
-img, iframe { max-width: 100%; }
+img, iframe { 
+ max-width: 100%;
+ height: auto;
+}
 
 body {
     /* http://css-tricks.com/perfect-full-page-background-image/ */
