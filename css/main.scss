@@ -570,8 +570,13 @@ main ul {
 /* UL-list links */
 .links { list-style-type: none; }
 
+/* Vaasa logo */
+.vaasa-logo {
+  margin: 2em 0;
+  text-align: center;
+}
 /* Vaasa area table */
-#vsa-area {
+.vaasa-area {
     width: 240px;
     margin: 10px auto 25px auto;
     padding: 10px ;
