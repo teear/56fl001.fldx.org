@@ -608,14 +608,16 @@ background: rgba(255,255,255,0.4) none repeat scroll 0% 0%;
 
 .qrz11search {
   display: table;
-  font-size: 0.8em;
+  font-size: 0.7em;
 }
 .qrz11search input[type=text] {
-  border: 1px solid #ccc;
+  border: 1px solid #cccccc5e;
   padding-left: 4px;
 }
 .qrz11search input[type=submit] {
-  border: none;
+  border: 1px solid #cccccc5e;
+  background-color: #cccccc4d;
+  color: #444;
   cursor: pointer;
 }
 
