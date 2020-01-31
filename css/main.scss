@@ -566,12 +566,15 @@ caption overlapping figure http://codepen.io/adobe/pen/bhoGK
 
 /* UL-list in main content area */
 main ul {
-  list-style-type: outside none disc;
+  list-style: none;
+  list-style-image: url('/images/bullet.svg');
   margin: 0 0 1em 1em;
 }
 
 /* UL-list links */
-.links { list-style-type: none; }
+.links {
+
+ }
 
 /* Vaasa logo */
 .vaasa-logo {
@@ -630,6 +633,7 @@ background: rgba(255,255,255,0.4) none repeat scroll 0% 0%;
   margin: 0;
   padding: 0;
   list-style-type: none;
+  list-style-image: none;
 }
 
 
