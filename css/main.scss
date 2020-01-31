@@ -603,14 +603,26 @@ background: rgba(255,255,255,0.4) none repeat scroll 0% 0%;
 .qrz11search { margin-left: auto; }
 }
 
-.qrz11search table { border: 0px; background-color: #ececec; opacity: 0.90; }
-.qrz11search label { @include font-size(16); }
+.qrz11search {
+  display: table;
+  font-size: 0.8em;
+}
+.qrz11search input[type=text] {
+  border: 1px solid #ccc;
+  padding-left: 4px;
+}
 .qrz11search input[type=submit] {
-    border: none;
-    background-color: #fff;
-    color: #252525;
-    padding: 2px;
-    @include font-size(14);
+  border: none;
+  cursor: pointer;
+}
+
+.qrz11search-banner {
+  text-align: center;
+}
+
+.qrz11search-search {
+  background-color: #fff;
+  text-align: center;
 }
 
 /* .item-list, ul with no ul styling */
