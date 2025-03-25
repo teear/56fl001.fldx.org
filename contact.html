@@ -37,6 +37,12 @@ function tarkistus() {
 </p>
 
 <div id="address">
+	<img src="images/qsl_writing_smaller.jpg" alt="Some QSLs under work">
+	<p>56FL001 QSL &amp; mailing address is available via e-mail.<br>
+	You can also use the contact form below.</p>
+</div>
+{% comment %}
+<div id="address">
 	56FL001 QSL &amp; Mailing Address<br>
 	<img src="images/qsl_writing_smaller.jpg" alt="Some QSLs under work">
 	<div itemprop="address" itemscope itemtype="http://schema.org/PostalAddress">
@@ -47,11 +53,7 @@ function tarkistus() {
 	<span itemprop="addressCountry">Finland</span>
 	</div>
 </div>
-
-<p>
-	You can also use the contact form below
-</p>
-
+{% endcomment %}
 <div id="contact-form">
 	<form role="form" action="http://fldx.org/56fl001/FormToEmail.php" method="post" onsubmit="return tarkistus();">
 		<p>
